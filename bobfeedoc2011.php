@@ -3,7 +3,7 @@ Version - 1.0
 Author - Jason Bolton - idksa - idkdevsa@gmail.com
 
 <?php
-class ControllerFeedbobfeedoc2 extends Controller {
+class ControllerFeedbobfeedoc2011 extends Controller {
 	public function index() {
 		
 			$output  = '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>';
