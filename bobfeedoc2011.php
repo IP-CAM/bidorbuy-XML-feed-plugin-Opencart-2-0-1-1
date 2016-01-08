@@ -1,3 +1,7 @@
+Bidorbuy XML feed plugin - Tested on Opencart 2.0.1.1
+Version - 1.0
+Author - Jason Bolton - idksa - idkdevsa@gmail.com
+
 <?php
 class ControllerFeedbobfeedoc2 extends Controller {
 	public function index() {
