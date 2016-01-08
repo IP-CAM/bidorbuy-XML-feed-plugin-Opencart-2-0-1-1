@@ -1,6 +1,7 @@
 <?php
 class ControllerFeedbobfeedoc2 extends Controller {
 	public function index() {
+		
 			$output  = '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>';
 
 			$this->load->model('catalog/category');
@@ -10,7 +11,9 @@ class ControllerFeedbobfeedoc2 extends Controller {
 			$this->load->model('tool/image');
 
 			$products = $this->model_catalog_product->getProducts();
-
+			
+			// build xml output
+			
 			$output .= '<ROOT>';
 			$output .= '<Products>';
 			
@@ -52,11 +55,14 @@ class ControllerFeedbobfeedoc2 extends Controller {
 
 			$output .= '</Products>';
 			$output .= '</ROOT>';
-
+			
 			$this->response->addHeader('Content-Type: application/rss+xml');
 			$this->response->setOutput($output);
 		}
 	
+			//end block
+
+			
 	protected function getPath($parent_id, $current_path = '') {
 		$category_info = $this->model_catalog_category->getCategory($parent_id);
 
